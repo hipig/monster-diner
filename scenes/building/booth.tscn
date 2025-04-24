@@ -1,0 +1,154 @@
+[gd_scene load_steps=20 format=3 uid="uid://bn0a2lcu8ppyg"]
+
+[ext_resource type="Texture2D" uid="uid://bpp0pgjhjyulc" path="res://assets/textures/characters/npcs/npc02/idle.png" id="2_g3y8y"]
+[ext_resource type="TileSet" uid="uid://chq7bjo8racy8" path="res://tilesets/building.tres" id="2_w2w46"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fimbb"]
+atlas = ExtResource("2_g3y8y")
+region = Rect2(0, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hotd0"]
+atlas = ExtResource("2_g3y8y")
+region = Rect2(16, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_suq8t"]
+atlas = ExtResource("2_g3y8y")
+region = Rect2(32, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_435d4"]
+atlas = ExtResource("2_g3y8y")
+region = Rect2(48, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fa5c4"]
+atlas = ExtResource("2_g3y8y")
+region = Rect2(0, 24, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bla5q"]
+atlas = ExtResource("2_g3y8y")
+region = Rect2(16, 24, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7m3aq"]
+atlas = ExtResource("2_g3y8y")
+region = Rect2(32, 24, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_okff1"]
+atlas = ExtResource("2_g3y8y")
+region = Rect2(48, 24, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_toorv"]
+atlas = ExtResource("2_g3y8y")
+region = Rect2(0, 48, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u33bi"]
+atlas = ExtResource("2_g3y8y")
+region = Rect2(16, 48, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kqb1y"]
+atlas = ExtResource("2_g3y8y")
+region = Rect2(32, 48, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_py4v0"]
+atlas = ExtResource("2_g3y8y")
+region = Rect2(48, 48, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dtum1"]
+atlas = ExtResource("2_g3y8y")
+region = Rect2(0, 72, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_55bcj"]
+atlas = ExtResource("2_g3y8y")
+region = Rect2(16, 72, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q8hb4"]
+atlas = ExtResource("2_g3y8y")
+region = Rect2(32, 72, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5y0mn"]
+atlas = ExtResource("2_g3y8y")
+region = Rect2(48, 72, 16, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xguop"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fimbb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hotd0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_suq8t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_435d4")
+}],
+"loop": true,
+"name": &"idle_down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fa5c4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bla5q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7m3aq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_okff1")
+}],
+"loop": true,
+"name": &"idle_left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_toorv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u33bi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kqb1y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_py4v0")
+}],
+"loop": true,
+"name": &"idle_right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dtum1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_55bcj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q8hb4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5y0mn")
+}],
+"loop": true,
+"name": &"idle_top",
+"speed": 5.0
+}]
+
+[node name="Booth" type="Node2D"]
+metadata/_edit_lock_ = true
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+z_index = 1
+tile_map_data = PackedByteArray(0, 0, 255, 255, 254, 255, 0, 0, 4, 0, 33, 0, 0, 0)
+tile_set = ExtResource("2_w2w46")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -19)
+sprite_frames = SubResource("SpriteFrames_xguop")
+animation = &"idle_down"
+autoplay = "idle_down"
+frame_progress = 0.0174895

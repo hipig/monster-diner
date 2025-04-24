@@ -1,0 +1,109 @@
+[gd_scene load_steps=10 format=3 uid="uid://bfaqon8vcpg0k"]
+
+[ext_resource type="Texture2D" uid="uid://b2kuyea3ylxlm" path="res://assets/textures/ui/base.png" id="1_ybj5x"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4ravn"]
+atlas = ExtResource("1_ybj5x")
+region = Rect2(6, 6, 36, 36)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_oohqg"]
+texture = SubResource("AtlasTexture_4ravn")
+texture_margin_left = 9.0
+texture_margin_top = 9.0
+texture_margin_right = 9.0
+texture_margin_bottom = 9.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rdb1t"]
+atlas = ExtResource("1_ybj5x")
+region = Rect2(0, 50, 47, 13)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4jrt7"]
+texture = SubResource("AtlasTexture_rdb1t")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ybj5x"]
+atlas = ExtResource("1_ybj5x")
+region = Rect2(289, 70, 46, 17)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4ravn"]
+texture = SubResource("AtlasTexture_ybj5x")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 4.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oohqg"]
+atlas = ExtResource("1_ybj5x")
+region = Rect2(0, 112, 16, 16)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rdb1t"]
+texture = SubResource("AtlasTexture_oohqg")
+texture_margin_left = 1.0
+texture_margin_top = 1.0
+texture_margin_right = 1.0
+texture_margin_bottom = 1.0
+
+[node name="MarketPanel" type="Panel"]
+custom_minimum_size = Vector2(300, 320)
+offset_right = 240.0
+offset_bottom = 320.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_oohqg")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 15.0
+grow_horizontal = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = -12
+
+[node name="PanelContainer" type="PanelContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_styles/panel = SubResource("StyleBoxTexture_4jrt7")
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 4
+
+[node name="Label" type="Label" parent="MarginContainer/PanelContainer/MarginContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+text = "食材商人"
+
+[node name="MarginContainer2" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="PanelContainer" type="PanelContainer" parent="MarginContainer2"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_4ravn")
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer2/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer2/PanelContainer/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="Button" type="Button" parent="MarginContainer2/PanelContainer/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(36, 36)
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_styles/normal = SubResource("StyleBoxTexture_rdb1t")

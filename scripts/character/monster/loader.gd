@@ -1,0 +1,17 @@
+extends Node
+class_name MonsterLoader
+
+enum RateType {
+	BOG_DWELLERS,
+	DESERTIC,
+	DRAGONS,
+	EXTRAS,
+	FEYWILD,
+	FROSTLANS,
+	INFERNAL,
+	LOYALISTS,
+	MEDIEVAL_MANUSCRIOTS,
+	UNDEAD,
+	WILDINGS,
+	YOKAI
+}

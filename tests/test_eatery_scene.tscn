@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=4 uid="uid://csqbg7wa4nbf3"]
 
 [ext_resource type="TileSet" uid="uid://dgkel1l1af5x5" path="res://tilesets/interior.tres" id="1_8amn2"]
-[ext_resource type="PackedScene" uid="uid://d0gmkrjawybxv" path="res://scenes/characters/player.tscn" id="2_ad3fe"]
+[ext_resource type="PackedScene" uid="uid://d0gmkrjawybxv" path="res://scenes/character/player.tscn" id="2_ad3fe"]
 
 [node name="TestEateryScene" type="Node2D"]
 

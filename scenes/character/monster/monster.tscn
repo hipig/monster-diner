@@ -1,0 +1,76 @@
+[gd_scene load_steps=7 format=3 uid="uid://ddfhdbwb7d8jv"]
+
+[ext_resource type="Script" uid="uid://byx4j2kfm5mme" path="res://scripts/character/monster/monster.gd" id="1_em4nr"]
+[ext_resource type="Script" uid="uid://ctbmhenwrx4lc" path="res://scripts/system/state_machine/node_state_machine.gd" id="2_2h0j4"]
+[ext_resource type="Script" uid="uid://dcmpufkmhkxv7" path="res://scripts/character/monster/states/idle_state.gd" id="3_byabp"]
+[ext_resource type="Script" uid="uid://k523cyan8yt0" path="res://scripts/character/monster/states/walk_state.gd" id="4_2h0j4"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g8pby"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"idle_down",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"idle_left",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"idle_right",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"idle_top",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": false,
+"name": &"walk_down",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": false,
+"name": &"walk_left",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": false,
+"name": &"walk_right",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": false,
+"name": &"walk_top",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gb07t"]
+radius = 5.0
+height = 10.0
+
+[node name="Monster" type="CharacterBody2D"]
+script = ExtResource("1_em4nr")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_g8pby")
+animation = &"walk_top"
+autoplay = "idle_down"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_gb07t")
+
+[node name="NodeStateMachine" type="Node" parent="."]
+script = ExtResource("2_2h0j4")
+metadata/_custom_type_script = "uid://ctbmhenwrx4lc"
+
+[node name="Idle" type="Node" parent="NodeStateMachine"]
+script = ExtResource("3_byabp")
+metadata/_custom_type_script = "uid://da5721yqpo4e7"
+
+[node name="Walk" type="Node" parent="NodeStateMachine"]
+script = ExtResource("4_2h0j4")
+metadata/_custom_type_script = "uid://da5721yqpo4e7"

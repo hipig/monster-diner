@@ -1,0 +1,2 @@
+extends FoodItem
+class_name DessertItem

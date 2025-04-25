@@ -1,11 +1,11 @@
 [gd_scene load_steps=41 format=3 uid="uid://d0gmkrjawybxv"]
 
-[ext_resource type="Script" uid="uid://co6qpl0a4o1qk" path="res://scripts/characters/player/player.gd" id="1_kqtwu"]
+[ext_resource type="Script" uid="uid://co6qpl0a4o1qk" path="res://scripts/character/player/player.gd" id="1_kqtwu"]
 [ext_resource type="Texture2D" uid="uid://dgoylpkbeiiau" path="res://assets/textures/characters/heros/swashbuckler/Swashbuckler_idle.png" id="1_yewv4"]
 [ext_resource type="Texture2D" uid="uid://dtup18i5bpnai" path="res://assets/textures/characters/heros/swashbuckler/Swashbuckler_walk.png" id="2_76oj4"]
-[ext_resource type="Script" uid="uid://ctbmhenwrx4lc" path="res://scripts/state_machine/node_state_machine.gd" id="4_6eyoc"]
-[ext_resource type="Script" uid="uid://jhld1owd4ema" path="res://scripts/characters/player/states/idle_state.gd" id="5_eojnx"]
-[ext_resource type="Script" uid="uid://biehk2detcj38" path="res://scripts/characters/player/states/walk_state.gd" id="6_qgnko"]
+[ext_resource type="Script" uid="uid://ctbmhenwrx4lc" path="res://scripts/system/state_machine/node_state_machine.gd" id="4_6eyoc"]
+[ext_resource type="Script" uid="uid://jhld1owd4ema" path="res://scripts/character/player/states/idle_state.gd" id="5_eojnx"]
+[ext_resource type="Script" uid="uid://biehk2detcj38" path="res://scripts/character/player/states/walk_state.gd" id="6_qgnko"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dyp2m"]
 atlas = ExtResource("1_yewv4")

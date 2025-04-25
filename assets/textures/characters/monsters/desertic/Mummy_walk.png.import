@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cyj0nucfv1tpk"
-path="res://.godot/imported/RPG Halloween tileset (full).png-a65669fe1555e33347c469825c9455a2.ctex"
+uid="uid://ivep0ipljp7m"
+path="res://.godot/imported/Mummy_walk.png-6902074c9cc722d511737e6b88b4b291.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/characters/RPG Halloween tileset (full).png"
-dest_files=["res://.godot/imported/RPG Halloween tileset (full).png-a65669fe1555e33347c469825c9455a2.ctex"]
+source_file="res://assets/textures/characters/monsters/desertic/Mummy_walk.png"
+dest_files=["res://.godot/imported/Mummy_walk.png-6902074c9cc722d511737e6b88b4b291.ctex"]
 
 [params]
 

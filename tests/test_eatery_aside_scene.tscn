@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=4 uid="uid://c3n6f5rlmrrqu"]
 
 [ext_resource type="TileSet" uid="uid://bi65vqoj1vxb4" path="res://tilesets/terrain.tres" id="1_hc63o"]
-[ext_resource type="PackedScene" uid="uid://d0gmkrjawybxv" path="res://scenes/characters/player.tscn" id="2_68qxr"]
+[ext_resource type="PackedScene" uid="uid://d0gmkrjawybxv" path="res://scenes/character/player.tscn" id="2_68qxr"]
 
 [node name="TestEateryAsideScene" type="Node2D"]
 

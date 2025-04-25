@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="FoodItem" load_steps=2 format=3 uid="uid://cq18yyl2qisym"]
+
+[ext_resource type="Script" uid="uid://bjgraiqpm0kns" path="res://scripts/resource/items/food_item.gd" id="1_e81ii"]
+
+[resource]
+script = ExtResource("1_e81ii")
+price_range = Vector2i(5, 8)
+stock_range = Vector2i(1, 5)
+related_rates = Array[int]([])
+id = "potato"
+name = "土豆"
+description = "土豆"
+metadata/_custom_type_script = "uid://bjgraiqpm0kns"
